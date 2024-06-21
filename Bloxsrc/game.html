@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Plane with First-Person Perspective in Three.js</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="mainMenu">
+        <h1>Select a Map</h1>
+        <div class="map-icons">
+            <img src="images/map1.png" alt="Map 1" onclick="selectMap(1)">
+            <img src="images/map2.png" alt="Map 2" onclick="selectMap(2)">
+            <img src="images/map3.png" alt="Map 3" onclick="selectMap(3)">
+            <img src="images/map4.png" alt="Map 4" onclick="selectMap(4)">
+        </div>
+    </div>
+    <div id="crosshair" style="display: none;">
+        <div class="dot" style="top: -10px; left: 0;"></div>
+        <div class="dot" style="top: 10px; left: 0;"></div>
+        <div class="dot" style="top: 0; left: -10px;"></div>
+        <div class="dot" style="top: 0; left: 10px;"></div>
+        <div class="dot" style="top: 0; left: 0;"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+    <script src="dlls/client/cl_player.js"></script>
+    <script src="dlls/server/sv_player.js"></script>
+    <script src="dlls/engine.js"></script>
+    <!-- Manually load client scripts -->
+    <script src="dlls/client/cl_entities.js"></script>
+    <!-- Manually load server scripts -->
+    <script src="dlls/server/sv_entities.js"></script>
+    <!-- Manually load map scripts -->
+    <script src="maps/map1.js"></script>
+    <script src="maps/map2.js"></script>
+    <script src="maps/map3.js"></script>
+    <script src="maps/map4.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body { margin: 0; overflow: hidden; }
+canvas { display: block; }
+
+#mainMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.map-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.map-icons img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.map-icons img:hover {
+    transform: scale(1.1);
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+}

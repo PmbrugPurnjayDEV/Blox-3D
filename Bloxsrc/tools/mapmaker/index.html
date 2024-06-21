@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map Editor</title>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+    canvas {
+        flex-grow: 1;
+        border: 1px solid black;
+        display: block;
+        background: #44ff00;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background: #f0f0f0;
+    }
+    button, input[type="file"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+</style>
+</head>
+<body>
+<canvas id="mapCanvas" width="800" height="600"></canvas>
+<div>
+    <button onclick="selectTool('wall')">Wall</button>
+    <button onclick="selectTool('column')">Column</button>
+    <button onclick="selectTool('block')">Block</button>
+    <button onclick="newMap()">New Map</button>
+    <input type="file" id="fileInput" accept=".json" onchange="openMap(event)">
+    <button onclick="document.getElementById('fileInput').click();">Open Map</button>
+    <button onclick="saveMap()">Save Map</button>
+    <button onclick="generateCode()">Generate Code</button>
+</div>
+<script src="mapEditor.js"></script>
+</body>
+</html>
